@@ -10,6 +10,55 @@ A collection of starter Arduino sketches for the Arduino Uno, designed to help b
 *   [Contributing](#contributing)
 *   [License](#license)
 
+## Pre-Requisite Knowledge
+
+Arduino uses standard C-style comment syntax. These are essential for documenting hardware configurations, such as which physical pins are connected to which components.
+
+* **Block Comments:** Wrapped in `/* ... */`. Typically used for file headers and licensing.
+* **Inline Comments:** Started with `//`. Used for line-by-line logic explanation.
+
+### The `setup()` Function: Initialization
+
+In a standard C++ program, execution starts and ends with `main()`. In Arduino, the `main()` function is hidden by the build system, which instead calls two specific entry points. The first is `setup()`.
+
+**`setup()`** runs exactly **once** upon power-up or hardware reset. This is where you perform "one-time" configuration.
+
+
+```C++
+void setup() {
+  // Configures the specified pin to behave as an OUTPUT.
+  // LED_BUILTIN is a macro that maps to the onboard LED pin (usually pin 13).
+  pinMode(LED_BUILTIN, OUTPUT);
+}
+```
+
+- **`pinMode(pin, mode)`**: This function sets the data direction register for the GPIO.
+- **`LED_BUILTIN`**: An environment-defined constant. Using this instead of a hardcoded integer (like `13`) ensures portability across different Arduino boards.
+    
+### The `loop()` Function: The Super-Loop
+
+After `setup()` finishes, the microcontroller enters the **`loop()`** function. This function executes sequentially and, upon reaching the closing brace, immediately restarts from the top. This is a standard "super-loop" architecture used in embedded programming.
+
+```C++
+void loop() {
+  digitalWrite(LED_BUILTIN, HIGH);  // Set the pin voltage to 5V (or 3.3V)
+  delay(1000);                      // Block execution for 1000 milliseconds
+  digitalWrite(LED_BUILTIN, LOW);   // Set the pin voltage to 0V (Ground)
+  delay(1000);                      // Block execution for 1000 milliseconds
+}
+```
+
+#### Key Technical Operations:
+
+- **`digitalWrite(pin, value)`**: This sets the state of the pin. `HIGH` applies voltage (logic 1), and `LOW` connects the pin to ground (logic 0).
+- **`delay(ms)`**: This is a **blocking** function. The processor "spins" in a tight loop for the specified number of milliseconds, preventing any other code from executing during this window.
+
+### Syntax and Structure 
+
+- **Statement Termination**: Every statement must end with a semicolon (`;`). Forgetting this is the most common cause of compiler errors in C-based languages
+- **Case Sensitivity**: Like most modern languages, `pinMode` is distinct from `pinmode`.
+- **Function Invocation**: This is a standard function call. You are passing two arguments to the `pinMode` function to change the state of the microcontroller's hardware
+
 ## Getting Started
 
 To use these sketches, you'll need:
@@ -27,6 +76,10 @@ To use these sketches, you'll need:
 4.  In the Arduino IDE, select your board (`Tools > Board > Arduino AVR Boards > Arduino Uno`) and the correct port (`Tools > Port`).
 5.  Upload the sketch to your Arduino board by clicking the "Upload" button (right arrow icon) in the IDE.
 6.  Refer to the `README.md` within each sketch's folder for specific wiring instructions, parts lists, and code explanations.
+
+### Learning Resources
+
+If you're new to Arduino, a great place to start is the [Adafruit Arduino Lesson Series](https://www.ladyada.net/learn/arduino/index.html), which provides a comprehensive introduction to Arduino basics.
 
 ## Sketches
 
