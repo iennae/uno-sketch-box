@@ -6,13 +6,13 @@ This sketch demonstrates a 4-bit binary counter using four LEDs. The LEDs will l
 
 *   Arduino Uno
 *   4 x LEDs (e.g., 1 Red, 2 Green, 1 Blue)
-*   4 x 220 Ohm Resistors (or similar, depending on your LEDs)
+*   4 x 1KΩ Resistors (brown-black-red-gold), one for each LED. Values from 300Ω to 2KΩ are also suitable.
 *   Jumper Wires
-*   Breadboard (optional, for easier wiring)
+*   Breadboard 
 
 ## Wiring
 
-Connect the long leg (anode) of each LED to a digital pin through a 220 Ohm resistor. Connect the short leg (cathode) of each LED to GND.
+Connect the long leg (anode) of each LED to a digital pin through a 1KΩ resistor. Connect the short leg (cathode) of each LED to GND.
 
 | Component   | Pin       | Binary Value |
 | ----------- | --------- | ------------ |

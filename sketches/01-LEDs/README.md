@@ -17,4 +17,8 @@ But you have wired your LEDs to pins 2, 3, 4, and 5, you would change it to:
 int pins[] = {2, 3, 4, 5}; 
 ```
 
+### A Note on LED Colors
+
+The specific colors of LEDs mentioned in the individual project `README.md` files (e.g., "1 Red, 1 Blue, 2 Green") are primarily a reflection of the components that were readily available during the creation of these examples. **The functionality of the sketches is generally independent of the LED color.** Feel free to use any color LEDs you have on hand to follow along with these projects.
+
 Always check the `README.md` for each sketch for specific details on which pin corresponds to which component.

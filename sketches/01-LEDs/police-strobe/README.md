@@ -7,14 +7,14 @@ This sketch simulates a police strobe light effect, rapidly flashing red and blu
 *   Arduino Uno
 *   1 x Red LED
 *   1 x Blue LED
-*   2 x 220 Ohm Resistors (or similar)
+*   2 x 1KΩ Resistors (brown-black-red-gold), one for each LED. Values from 300Ω to 2KΩ are also suitable.
 *   Jumper Wires
-*   Breadboard (optional, for easier wiring)
+*   Breadboard 
 
 ## Wiring
 
-Connect the long leg (anode) of the Red LED to digital Pin 8 through a 220 Ohm resistor. Connect the short leg (cathode) of the Red LED to GND.
-Connect the long leg (anode) of the Blue LED to digital Pin 12 through a 220 Ohm resistor. Connect the short leg (cathode) of the Blue LED to GND.
+Connect the long leg (anode) of the Red LED to digital Pin 8 through a 1KΩ resistor. Connect the short leg (cathode) of the Red LED to GND.
+Connect the long leg (anode) of the Blue LED to digital Pin 12 through a 1KΩ resistor. Connect the short leg (cathode) of the Blue LED to GND.
 
 The other pins (10 and 11) are declared as OUTPUTs in the code, but not used in the `loop()` function for the strobe effect. You can choose to use them for additional LEDs or ignore them if only using red and blue.
 
