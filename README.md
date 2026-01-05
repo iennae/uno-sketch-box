@@ -97,7 +97,7 @@ To use these sketches, you'll need:
 
 ### How to Use a Sketch
 
-1.  Navigate to the desired sketch's folder (e.g., `sketches/01-leds/led-scanner`).
+1.  Navigate to the desired sketch's folder (e.g., `sketches/01-LEDs/led-scanner`).
 2.  Open the `.ino` file (e.g., `led-scanner.ino`) in the Arduino IDE.
 3.  Connect your Arduino Uno board to your computer via USB.
 4.  In the Arduino IDE, select your board (`Tools > Board > Arduino AVR Boards > Arduino Uno`) and the correct port (`Tools > Port`).
@@ -114,10 +114,10 @@ If you're new to Arduino, a great place to start is the [Adafruit Arduino Lesson
 
 A collection of sketches demonstrating various ways to control Light Emitting Diodes (LEDs), covering basic output, patterns, and random effects.
 
-*   **[LED Scanner](sketches/01-leds/led-scanner/README.md)**: Creates a classic scanning light effect.
-*   **[Binary Counter](sketches/01-leds/binary-counter/README.md)**: Displays numbers 0-15 in binary using four LEDs.
-*   **[Police Strobe](sketches/01-leds/police-strobe/README.md)**: Simulates a police car strobe light with alternating red and blue flashes.
-*   **[Random Winner Picker](sketches/01-leds/random-winner-picker/README.md)**: A spinning light that randomly selects and illuminates one LED.
+*   **[LED Scanner](sketches/01-LEDs/led-scanner/README.md)**: Creates a classic scanning light effect.
+*   **[Binary Counter](sketches/01-LEDs/binary-counter/README.md)**: Displays numbers 0-15 in binary using four LEDs.
+*   **[Police Strobe](sketches/01-LEDs/police-strobe/README.md)**: Simulates a police car strobe light with alternating red and blue flashes.
+*   **[Random Winner Picker](sketches/01-LEDs/random-winner-picker/README.md)**: A spinning light that randomly selects and illuminates one LED.
 
 ## Contributing
 
