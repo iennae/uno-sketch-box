@@ -24,4 +24,4 @@ jobs:
         with:
           fqbn: "arduino:avr:uno"
           sketch-paths: |
-            - ./sketches/*/* # Compiles every .ino file in the sketches folder
+            - sketches/**/* # Compiles every .ino file in the sketches folder
