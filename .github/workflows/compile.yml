@@ -1,5 +1,11 @@
 name: Compile Sketches
-on: [push, pull_request]
+on:
+  push:
+    paths:
+      - 'sketches/**/*.ino'
+  pull_request:
+    paths:
+      - 'sketches/**/*.ino'
 
 jobs:
   lint:
