@@ -3,9 +3,18 @@
 A collection of starter Arduino sketches for incrementally learning hardware fundamentals towards my ultimate goal: building a functional LEGO droid.
 
 
+## ⚠️ Disclaimer & Liability
+Use at your own risk. This project is a personal learning journey documented for educational purposes.
+
+No Warranty: This code is provided "as is" without warranty of any kind, express or implied.
+
+No Support: As this is a personal hobby project, I cannot provide active support or guarantee compatibility with your specific hardware configuration.
+
+Hardware Variation: Arduino kits—especially vintage or third-party kits—can vary significantly in pinouts and power requirements. Always verify your wiring and power levels before uploading code to avoid damaging your components.
+
 ## Table of Contents
 
-* [📓 The Journey] 
+* [📓 The Journey](#-the-journey) 
 * [Hardware Fundamentals](#hardware-fundamentals)
 * [Core Software Concepts](#core-software-concepts)
 * [Getting Started](#getting-started)
@@ -15,6 +24,8 @@ A collection of starter Arduino sketches for incrementally learning hardware fun
 
 
 ## 📓 The Journey
+
+![DEV.to](https://img.shields.io/badge/Project_Blog-DEV.to-0a0a0a?style=for-the-badge&logo=devdotto&logoColor=white)
 
 This project is being documented as a series of articles on DEV.to, covering everything from unboxing 16-year-old hardware to (hopefully) an eventual LEGO droid.
 
@@ -124,8 +135,11 @@ A collection of sketches demonstrating various ways to control Light Emitting Di
 
 *   **[LED Scanner](sketches/01-LEDs/led-scanner/README.md)**: Creates a classic scanning light effect.
 *   **[Binary Counter](sketches/01-LEDs/binary-counter/README.md)**: Displays numbers 0-15 in binary using four LEDs.
+{% youtube 1vEevR4qY-8 %} 
 *   **[Police Strobe](sketches/01-LEDs/police-strobe/README.md)**: Simulates a police car strobe light with alternating red and blue flashes.
+{% youtube mL4Sdts8zg4 %} 
 *   **[Random Winner Picker](sketches/01-LEDs/random-winner-picker/README.md)**: A spinning light that randomly selects and illuminates one LED.
+{% youtube YaFgHoTzhx0 %} 
 
 ## Contributing
 

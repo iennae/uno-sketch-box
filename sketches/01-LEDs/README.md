@@ -1,6 +1,6 @@
 # 01-LEDs: Getting Started with LEDs
 
-This collection of sketches provides a hands-on introduction to controlling Light Emitting Diodes (LEDs) with an Arduino Uno. You'll learn everything from basic on-off control to creating complex visual effects like patterns and random displays.
+This collection of sketches provides a hands-on introduction to controlling Light Emitting Diodes (LEDs) with an Arduino Uno. 
 
 ## A Note on Pin Configuration
 
