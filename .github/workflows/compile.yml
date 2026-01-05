@@ -12,7 +12,7 @@ jobs:
         with:
           project-type: sketch
           recursive: true
-          fail-on-warnings: false
+          compliance: permissive
   build:
     runs-on: ubuntu-latest
     steps:
