@@ -65,7 +65,7 @@ To use these sketches, you'll need:
 
 *   An Arduino Uno board
 *   The Arduino IDE installed on your computer (available at [arduino.cc](https://www.arduino.cc/))
-*   A USB cable to connect your Arduino to your computer
+*   A USB A-to-B Data/Sync cable to connect your Arduino to your computer (the USB-B connector is the blocky, square-ish end that plugs into the Arduino Uno)
 *   Basic electronic components as specified in each sketch's `README.md`
 
 ### How to Use a Sketch
