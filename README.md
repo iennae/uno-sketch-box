@@ -136,11 +136,8 @@ A collection of sketches demonstrating various ways to control Light Emitting Di
 
 *   **[LED Scanner](sketches/01-LEDs/led-scanner/README.md)**: Creates a classic scanning light effect.
 *   **[Binary Counter](sketches/01-LEDs/binary-counter/README.md)**: Displays numbers 0-15 in binary using four LEDs.
-{% youtube 1vEevR4qY-8 %} 
 *   **[Police Strobe](sketches/01-LEDs/police-strobe/README.md)**: Simulates a police car strobe light with alternating red and blue flashes.
-{% youtube mL4Sdts8zg4 %} 
 *   **[Random Winner Picker](sketches/01-LEDs/random-winner-picker/README.md)**: A spinning light that randomly selects and illuminates one LED.
-{% youtube YaFgHoTzhx0 %} 
 
 ## Contributing
 
