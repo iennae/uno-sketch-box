@@ -1,0 +1,27 @@
+name: Compile Sketches
+on: [push, pull_request]
+
+jobs:
+  lint:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@8e8c483db84b4bee98b60c0593521ed34d9990e8
+      - name: Arduino Lint
+        uses: arduino/arduino-lint-action@4de5fc895deecbda2f6b1cc05de7a8fdd5c4c51f
+        with:
+          project-type: sketch
+          recursive: true
+          fail-on-warnings: false
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@8e8c483db84b4bee98b60c0593521ed34d9990e8
+
+      - name: Compile Arduino sketches
+        uses: arduino/compile-sketches@8ac27e99289705c4abec832089575d687b859227
+        with:
+          fqbn: "arduino:avr:uno"
+          sketch-paths: |
+            - ./sketches/* # Compiles every .ino file in the sketches folder
