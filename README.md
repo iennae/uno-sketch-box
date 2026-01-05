@@ -25,7 +25,7 @@ Hardware Variation: Arduino kits—especially vintage or third-party kits—can 
 
 ## 📓 The Journey
 
-![DEV.to](https://img.shields.io/badge/Project_Blog-DEV.to-0a0a0a?style=for-the-badge&logo=devdotto&logoColor=white)
+[![DEV.to](https://img.shields.io/badge/Project_Blog-DEV.to-0a0a0a?style=for-the-badge&logo=devdotto&logoColor=white)](https://dev.to/sigje/from-2010-dust-to-droid-dreams-relearning-the-arduino-4f5g)
 
 This project is being documented as a series of articles on DEV.to, covering everything from unboxing 16-year-old hardware to (hopefully) an eventual LEGO droid.
 
