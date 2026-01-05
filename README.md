@@ -77,6 +77,7 @@ void loop() {
   digitalWrite(LED_BUILTIN, LOW);  // Turn LED off (0V)
   delay(1000);                     // Wait 1 second
 }
+```
 
 - **`pinMode(pin, mode)`**: This function sets the data direction register for the GPIO.
 - **`LED_BUILTIN`**: An environment-defined constant. Using this instead of a hardcoded integer (like `13`) ensures portability across different Arduino boards.
