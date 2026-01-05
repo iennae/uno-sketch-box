@@ -1,36 +1,63 @@
 # Uno Sketch Box
 
-A collection of starter Arduino sketches for the Arduino Uno, designed to help beginners explore various functionalities and concepts.
+A collection of starter Arduino sketches for the Arduino Uno that I created to explore various functionalities and concepts with electronics as I work towards building a droid. 
+
 
 ## Table of Contents
 
-*   [Getting Started](#getting-started)
-*   [Sketches](#sketches)
-    *   [01-LEDs](#01-leds)
-*   [Contributing](#contributing)
-*   [License](#license)
+* [Hardware Fundamentals](#hardware-fundamentals)
+* [Core Software Concepts](#core-software-concepts)
+* [Getting Started](#getting-started)
+* [Sketches](#sketches)
+* [Contributing](#contributing)
+* [License](#license)
 
-## Pre-Requisite Knowledge
+## Hardware Fundamentals
 
-Arduino uses standard C-style comment syntax. These are essential for documenting hardware configurations, such as which physical pins are connected to which components.
+Before wiring your components, keep these two concepts in mind:
 
-* **Block Comments:** Wrapped in `/* ... */`. Typically used for file headers and licensing.
-* **Inline Comments:** Started with `//`. Used for line-by-line logic explanation.
+### 1. The Breadboard
+Your breadboard may vary from what I used (a Full-size breadboard). You may have a  **Mini Breadboard** (no side rails) or a **Full-Size/Half-Size Breadboard** (with rails). 
 
-### The `setup()` Function: Initialization
+* **Terminal Strips (A-E and F-J):** These are the main connection points.
+    * Pins in a single numbered row (like 10A, 10B, 10C, 10D, 10E) are **electrically connected**.
+    * **The Trench:** The center notch separates columns A-E from F-J. This is vital for plugging in Integrated Circuits (ICs) so their legs don't short-circuit.
+* **Power Rails (Plus/Minus):** Found on larger boards. These run the entire length of the board.
+    * **Best Practice:** Connect the Arduino's `5V` pin to the red (+) rail and `GND` to the blue (-) rail. This gives you a "power bus" accessible from anywhere on the board.
+    * *If using a Mini Breadboard:* You will need to manually route your Ground wires back to the Arduino's GND pins.
 
-In a standard C++ program, execution starts and ends with `main()`. In Arduino, the `main()` function is hidden by the build system, which instead calls two specific entry points. The first is `setup()`.
+### 2. LED Polarity & Protection
+LEDs are diodes, meaning they only allow current to flow in one direction.
+* **The Long Leg (Anode):** Connects to the positive voltage (Digital Pin).
+* **The Short Leg (Cathode):** Connects to Ground (GND).
+* **Resistors:** Always place a **220Ω resistor** in series with your LED to limit current and prevent damage to the LED or the Arduino.
 
-**`setup()`** runs exactly **once** upon power-up or hardware reset. This is where you perform "one-time" configuration.
+---
 
+## Core Software Concepts
+
+Arduino uses standard C-style syntax. Documentation is handled via comments:
+* **Block Comments:** Wrapped in `/* ... */`. Typically used for headers.
+* **Inline Comments:** Started with `//`. Used for line-by-line logic.
+
+### The Arduino Lifecycle
+Unlike a standard computer program that runs once and stops, an Arduino sketch follows a continuous loop pattern.
+
+##1.  **`setup()`**: Runs exactly **once** upon power-up or reset. Use this to configure pin modes.
+2.  **`loop()`**: Runs sequentially from top to bottom, then **immediately restarts** at the top. This is the "Super-Loop" architecture used in embedded systems.
 
 ```C++
 void setup() {
-  // Configures the specified pin to behave as an OUTPUT.
-  // LED_BUILTIN is a macro that maps to the onboard LED pin (usually pin 13).
-  pinMode(LED_BUILTIN, OUTPUT);
+  // LED_BUILTIN is a macro for Pin 13
+  pinMode(LED_BUILTIN, OUTPUT); 
 }
-```
+
+void loop() {
+  digitalWrite(LED_BUILTIN, HIGH); // Turn LED on (5V)
+  delay(1000);                     // Wait 1 second (Blocking)
+  digitalWrite(LED_BUILTIN, LOW);  // Turn LED off (0V)
+  delay(1000);                     // Wait 1 second
+}
 
 - **`pinMode(pin, mode)`**: This function sets the data direction register for the GPIO.
 - **`LED_BUILTIN`**: An environment-defined constant. Using this instead of a hardcoded integer (like `13`) ensures portability across different Arduino boards.
@@ -64,9 +91,9 @@ void loop() {
 To use these sketches, you'll need:
 
 *   An Arduino Uno board
-*   The Arduino IDE installed on your computer (available at [arduino.cc](https://www.arduino.cc/))
+*   The Arduino IDE installed on your computer (available at [arduino.cc](https://www.arduino.cc/)). You could also use the Arduino CLI. 
 *   A USB A-to-B Data/Sync cable to connect your Arduino to your computer (the USB-B connector is the blocky, square-ish end that plugs into the Arduino Uno)
-*   Basic electronic components as specified in each sketch's `README.md`
+*   Basic electronic components or their equivalents as specified in each sketch's `README.md`
 
 ### How to Use a Sketch
 
@@ -94,7 +121,7 @@ A collection of sketches demonstrating various ways to control Light Emitting Di
 
 ## Contributing
 
-We welcome contributions! If you have a new sketch, an improvement to an existing one, or a bug fix:
+Contributions welcome. If you have a new sketch, an improvement to an existing one, or a bug fix:
 
 1.  Fork the repository.
 2.  Create a new branch (`git checkout -b feature/YourFeatureName` or `git checkout -b bugfix/BugFixName`).
