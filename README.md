@@ -1,16 +1,24 @@
 # Uno Sketch Box
 
-A collection of starter Arduino sketches for the Arduino Uno that I created to explore various functionalities and concepts with electronics as I work towards building a droid. 
+A collection of starter Arduino sketches for incrementally learning hardware fundamentals towards my ultimate goal: building a functional LEGO droid.
 
 
 ## Table of Contents
 
+* [📓 The Journey] 
 * [Hardware Fundamentals](#hardware-fundamentals)
 * [Core Software Concepts](#core-software-concepts)
 * [Getting Started](#getting-started)
 * [Sketches](#sketches)
 * [Contributing](#contributing)
 * [License](#license)
+
+
+## 📓 The Journey
+
+This project is being documented as a series of articles on DEV.to, covering everything from unboxing 16-year-old hardware to (hopefully) an eventual LEGO droid.
+
+* **Part 1: [From 2010 Dust to Droid Dreams](https://dev.to/sigje/from-2010-dust-to-droid-dreams-relearning-the-arduino-4f5g)** Relearning the Arduino UNO
 
 ## Hardware Fundamentals
 
